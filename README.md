@@ -8,6 +8,8 @@ Load a statically-linked ELF binary(x86 architecture) without the [*execve*](htt
 Build & pack using ``make``:
 ![build](./screenshots/build.gif)
 
+## Running
+
 After compiling, you can use the ``./bin/loader`` binary to run the dummy programs in ``bin/samples/tests/*.packed``. 
 
 The loader will unpack the elf in memory, map the segments to the right places in virtual memory, resolve symbols and [pass execution](./src/loader.c#L180) to the unpacked program's ``main()``.
